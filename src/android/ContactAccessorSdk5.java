@@ -992,7 +992,7 @@ public class ContactAccessorSdk5 extends ContactAccessor {
             photo.put("pref", false);
             photo.put("type", "url");
             Uri person = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, (Long.valueOf(contactId)));
-            Uri photoUri = Uri.withAppendedPath(person, ContactsContract.Contacts.Photo.CONTENT_DIRECTORY);
+            Uri photoUri = Uri.withAppendedPath(person, ContactsContract.Contacts.Photo.DISPLAY_PHOTO);
             photo.put("value", photoUri.toString());
 
             // Query photo existance
